@@ -1,5 +1,5 @@
 import { UnstableValue } from "../NamespacedValue";
-import { EitherAnd, TSNamespace } from "../types";
+import { EitherAnd } from "../types";
 import { M_MESSAGE_EVENT_CONTENT } from "./message_types";
 import { REFERENCE_RELATION, RELATES_TO_RELATIONSHIP } from "./relationship_types";
 
@@ -13,8 +13,9 @@ export const M_STREAM_START = new UnstableValue("m.stream.start", "org.matrix.ms
  */
 export type M_STREAM_START_SUBTYPE = {
     description: M_MESSAGE_EVENT_CONTENT;
-    stream_url: M_MESSAGE_EVENT_CONTENT;
-    third_party: boolean
+    stream_app: M_MESSAGE_EVENT_CONTENT;
+    stream_id: M_MESSAGE_EVENT_CONTENT;
+    third_party: boolean;
 };
 
 /**

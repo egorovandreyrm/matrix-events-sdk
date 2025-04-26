@@ -11,7 +11,8 @@ export declare const M_STREAM_START: UnstableValue<"m.stream.start", "org.matrix
  */
 export declare type M_STREAM_START_SUBTYPE = {
     description: M_MESSAGE_EVENT_CONTENT;
-    stream_url: M_MESSAGE_EVENT_CONTENT;
+    stream_app: M_MESSAGE_EVENT_CONTENT;
+    stream_id: M_MESSAGE_EVENT_CONTENT;
     third_party: boolean;
 };
 /**
