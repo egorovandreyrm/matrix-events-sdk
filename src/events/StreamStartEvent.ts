@@ -25,7 +25,7 @@ export class StreamStartEvent extends ExtensibleEvent<M_STREAM_START_EVENT_CONTE
         }
 
         if (!stream?.stream_app) {
-            throw new InvalidEventError("A stream_url is required");
+            throw new InvalidEventError("A stream_app is required");
         }
 
         if (!stream?.stream_id) {
@@ -37,7 +37,7 @@ export class StreamStartEvent extends ExtensibleEvent<M_STREAM_START_EVENT_CONTE
         }
 
         this.description = new MessageEvent({ type: "org.matrix.sdk.stream.description", content: stream.description });
-        this.stream_app = new MessageEvent({ type: "org.matrix.sdk.stream.stream_url", content: stream.stream_app });
+        this.stream_app = new MessageEvent({ type: "org.matrix.sdk.stream.stream_app", content: stream.stream_app });
         this.stream_id = new MessageEvent({ type: "org.matrix.sdk.stream.stream_id", content: stream.stream_id });
         this.third_party = stream.third_party;
     }
