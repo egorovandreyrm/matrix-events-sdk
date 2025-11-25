@@ -1,6 +1,6 @@
 import { NamespacedValue } from "./NamespacedValue";
 import { Optional } from "./types";
-declare type NS = NamespacedValue<Optional<string>, Optional<string>>;
+declare type NS = NamespacedValue<string, string>;
 /**
  * A `Map` implementation which accepts a NamespacedValue as a key, and arbitrary value. The
  * namespaced value must be a string type.
