@@ -19,3 +19,5 @@ export * from "./events/poll_types";
 export * from "./events/PollStartEvent";
 export * from "./events/PollResponseEvent";
 export * from "./events/PollEndEvent";
+export * from "./events/map_pin_types";
+export * from "./events/MapPinEvent";

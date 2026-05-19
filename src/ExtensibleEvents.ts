@@ -27,6 +27,8 @@ import { M_POLL_END, M_POLL_RESPONSE, M_POLL_START } from "./events/poll_types";
 import { parseMPoll } from "./interpreters/modern/MPoll";
 import {M_STREAM_END, M_STREAM_START} from "./events/stream_types";
 import {parseMStream} from "./interpreters/modern/MStream";
+import { M_MAP_PIN } from "./events/map_pin_types";
+import { parseMMapPin } from "./interpreters/modern/MMapPin";
 
 export type EventInterpreter<TContentIn = object, TEvent extends ExtensibleEvent = ExtensibleEvent>
     = (wireEvent: IPartialEvent<TContentIn>) => Optional<TEvent>;
@@ -49,7 +51,8 @@ export class ExtensibleEvents {
         [M_POLL_RESPONSE, parseMPoll],
         [M_POLL_END, parseMPoll],
         [M_STREAM_START, parseMStream],
-        [M_STREAM_END, parseMStream]
+        [M_STREAM_END, parseMStream],
+        [M_MAP_PIN, parseMMapPin],
     ]);
 
     private _unknownInterpretOrder: NamespacedValue<string, string>[] = [
