@@ -52,7 +52,7 @@ export class ExtensibleEvents {
         [M_POLL_END, parseMPoll],
         [M_STREAM_START, parseMStream],
         [M_STREAM_END, parseMStream],
-        [M_MAP_PIN, parseMMapPin],
+        // [M_MAP_PIN, parseMMapPin],
     ]);
 
     private _unknownInterpretOrder: NamespacedValue<string, string>[] = [
